@@ -1,0 +1,29 @@
+{
+  "name": "spotify",
+  "version": "1.0.0",
+  "description": "spotify app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "spotify"
+  ],
+  "author": "Andrew",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.34",
+    "querystring": "^0.2.0",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12"
+  }, 
+  "scripts": {
+  "start": "node index.js"
+  }
+}

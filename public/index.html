@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Spotify</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style type="text/css">
+      #login, #loggedin {
+        display: none;
+      }
+      .text-overflow {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+    </style> 
+  </head>
+
+  <body style="padding-top: 5rem;padding-bottom:5rem;">
+    <nav id="topNavbar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Spotify</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" onclick="getTracking()">Tracking</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" placeholder="Search" aria-label="Search" type="text"  id = "spotifySearchInput" oninput="spotifySearchInit()">
+          <button id="obtain-new-token" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div id="login" style="padding:3rem 1.5rem;text-align:center;">
+        <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+      </div>
+      <div id="loggedin">
+      </div>
+    </div>
+
+    <nav id="playbar" class="navbar navbar-dark bg-dark fixed-bottom" style="display:inline-block;text-align:center;">
+        <ul id = "playButtons" class="navbar-nav mr-auto " style="display:inline-block;">
+          <li class="nav-item mx-2" style="display:inline;">
+            <a id = "prevTrackButton" class="nav-link" href="#" onclick="previousTrack()" style="display:inline-block;">Previous</a>
+          </li>
+          <li class="nav-item mx-2" style="display:inline;">
+            <a id = "playButton" class="nav-link" href="#" onclick="play()" style="display:inline-block;">Play</a>
+          </li>
+          <li class="nav-item mx-2" style="display:inline;">
+            <a id = "nextTrackButton" class="nav-link" href="#" onclick="nextTrack()" style="display:inline-block;">Next</a>
+          </li>
+          <!--<li class="nav-item mx-2" style="display:inline;">
+            <a id = "nextTrackButton" class="nav-link" href="#" onclick="test()" style="display:inline-block;">Test</a>
+          </li>
+         <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com/" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li> -->
+        </ul>
+    </nav>
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.2.1.min.js"><\/script>')</script>
+    <script src="http://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script type='text/javascript' src="album.js"></script>
+    <script type='text/javascript' src="artistdisplay.js"></script>
+    <script type='text/javascript' src="components.js"></script>
+    <script type='text/javascript' src="contextmenu.js"></script>
+    <script type='text/javascript' src="library.js"></script>
+    <script type='text/javascript' src="player.js"></script>
+    <script type='text/javascript' src="playlistdiv.js"></script>
+    <script type='text/javascript' src="playlists.js"></script>
+    <script type='text/javascript' src="search.js"></script>
+    <script type='text/javascript' src="tracking.js"></script>
+    <script type='text/javascript' src="trackingdisplay.js"></script>
+    <script type='text/javascript' src="main.js"></script>
+  </body>
+</html>
